@@ -1,0 +1,131 @@
+/* Custom Dark Theme Variables */
+:root {
+  --bg-dark: #121212;
+  --bg-header: #1e1e1e;
+  --text-main: #f5f5f5;
+  --text-muted: #a0a0a0;
+  --accent-cyan: #00e5ff;
+  --accent-hover: #00b3cc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+/* Sticky Header (Extra Feature 1) */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-header);
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid var(--accent-cyan);
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent-cyan);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin: 0.5rem 0 1.5rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input[type="search"] {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#search-button {
+  background-color: var(--accent-cyan);
+  color: #000;
+}
+
+#search-button:hover {
+  background-color: var(--accent-hover);
+}
+
+#clear-button {
+  background-color: #444;
+  color: var(--text-main);
+}
+
+#clear-button:hover {
+  background-color: #555;
+}
+
+/* Main Content & Grid */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#result-count {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Required Responsive CSS Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
